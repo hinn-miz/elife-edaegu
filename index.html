@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>제천루하스 더카운티214</title>
+  <title>울산 에피트 스타시티</title>
 
   <!-- SNS 기본 -->
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="제천루하스 더카운티214 공식사이트" />
-<meta name="twitter:description" content="제천 최초의 민간임대 아파트, 10년 장기 임대, 직주근접, 다양한 특화서비스 제공." />
-<meta name="twitter:image" content="https://yourdomain.netlify.app/assets/images/og-image.jpg" />
-
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="울산 에피트 스타시티" />
+  <meta name="twitter:description" content="울산의 미래를 살다, 사통팔달에 직주근접 울산 에피트 스타시티" />
+  <meta name="twitter:image" content="https://ulsanefete.netlify.app/assets/images/og-image.jpg" />
 
   <!-- 스타일 및 폰트 -->
   <link rel="stylesheet" href="/assets/css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+
   <style>
     @font-face {
       font-family: 'ShillaCultureB';
@@ -23,6 +23,7 @@
       font-style: normal;
     }
 
+    /* ✅ Hero Section 스타일 */
     .hero {
       position: relative;
       height: 90vh;
@@ -31,6 +32,14 @@
       align-items: center;
       justify-content: center;
       overflow: hidden;
+      transform: scale(1.05);
+      opacity: 0;
+      transition: all 2s ease;
+    }
+
+    .hero.visible {
+      transform: scale(1);
+      opacity: 1;
     }
 
     .hero-inner {
@@ -40,13 +49,14 @@
       text-align: center;
       max-width: 90vw;
       white-space: nowrap;
-    }
-    .hero h1 {
-    margin-bottom: 0.2rem;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1.5s ease 0.6s;
     }
 
-    .hero .subtitle {
-       margin-top: 0;
+    .hero.visible .hero-inner {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     .hero::after {
@@ -63,7 +73,6 @@
       margin-bottom: 0.25rem;
       font-weight: normal;
       color: #fff;
-      animation: fadeUp 1s ease-out forwards;
     }
 
     .hero .subtitle {
@@ -71,41 +80,18 @@
       font-size: 3rem;
       font-weight: 400;
       color: #fff;
-      opacity: 0;
-      animation: fadeUp 1s ease-out forwards;
-      animation-delay: 0.5s;
     }
 
     .hero .subtext {
       font-size: 1.6rem;
       margin-top: 1rem;
       color: #fff;
-      opacity: 0;
-      animation: fadeUp 1s ease-out forwards;
-      animation-delay: 1s;
-    }
-
-    @keyframes fadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
     }
 
     @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2.4rem;
-      }
-      .hero .subtitle {
-        font-size: 2rem;
-      }
-      .hero .subtext {
-        font-size: 1.3rem;
-      }
+      .hero h1 { font-size: 2.4rem; }
+      .hero .subtitle { font-size: 2rem; }
+      .hero .subtext { font-size: 1.3rem; }
     }
 
     .showcase-fullscreen {
@@ -122,17 +108,15 @@
     }
 
     .showcase-image-wrapper img {
-  display: block;
-  margin: 0 auto;
-  width: auto;
-  max-width: 100%;
-  height: auto;
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 1.2s ease;
-}
-
-
+      display: block;
+      margin: 0 auto;
+      width: auto;
+      max-width: 100%;
+      height: auto;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 1.2s ease;
+    }
 
     .fade-item.visible {
       opacity: 1;
@@ -153,7 +137,6 @@
   </style>
 </head>
 <body>
-
   <!-- ✅ 헤더 불러오기 -->
   <div id="header-include"></div>
 
@@ -161,9 +144,9 @@
   <main class="main-section">
     <section class="hero">
       <div class="hero-inner">
-        <h1>10년이 달라지는 선택</h1>
-        <p class="subtitle">제천 최초 10년 프리미엄 아파트</p>
-        <p class="subtext">제천루하스 더 카운티214</p>
+        <h1>울산의 미래를 살다</h1>
+        <p class="subtitle">ALL NEW 프리미엄 라이프</p>
+        <p class="subtext">EFETE 울산 에피트 스타시티</p>
       </div>
     </section>
 
@@ -174,57 +157,83 @@
 
       <!-- 데스크탑용 이미지 -->
       <div class="showcase-image-wrapper desktop-only">
-        <img src="./assets/images/showcase2.png" class="fade-item delay-2" alt="포인트2">
+        <img src="./assets/images/showcase2.jpg" class="fade-item delay-2" alt="포인트2">
       </div>
       <div class="showcase-image-wrapper desktop-only">
-        <img src="./assets/images/showcase3.png" class="fade-item delay-3" alt="포인트3">
+        <img src="./assets/images/showcase3.jpg" class="fade-item delay-3" alt="포인트3">
       </div>
 
       <!-- 모바일용 이미지 -->
       <div class="showcase-image-wrapper mobile-only">
-        <img src="./assets/images/showcase2_m.png" class="fade-item delay-2" alt="모바일용 포인트2">
+        <img src="./assets/images/showcase2_m.jpg" class="fade-item delay-2" alt="모바일용 포인트2">
       </div>
       <div class="showcase-image-wrapper mobile-only">
-        <img src="./assets/images/showcase3_m.png" class="fade-item delay-3" alt="모바일용 포인트3">
+        <img src="./assets/images/showcase3_m.jpg" class="fade-item delay-3" alt="모바일용 포인트3">
       </div>
     </section>
   </main>
+
   <!-- ✅ 관심고객등록 플로팅 버튼 -->
   <div id="floating-button-include"></div>
-
 
   <!-- ✅ 푸터 불러오기 -->
   <div id="footer-include"></div>
 
-  <!-- ✅ 헤더/푸터 삽입용 JS -->
+  <!-- ✅ 스크립트: 컴포넌트 로딩 및 애니메이션 + 햄버거 메뉴 -->
   <script>
-    async function loadComponent(id, path) {
+    // ✅ 공통 컴포넌트(header/footer/플로팅 버튼) 비동기 로딩
+    async function loadComponent(id, path, callback) {
       try {
         const res = await fetch(path);
         if (!res.ok) throw new Error("Fetch failed");
         const html = await res.text();
         document.getElementById(id).innerHTML = html;
+        if (typeof callback === "function") callback();
       } catch (err) {
         console.error(`${path} 불러오기 실패:`, err);
       }
     }
 
-    loadComponent("header-include", "/components/header.html");
-    loadComponent("footer-include", "/components/footer.html");
-    loadComponent("floating-button-include", "/components/floating-button.html");
+    // ✅ 햄버거 메뉴 바인딩 함수
+    function bindMenuToggle() {
+      const menuToggle = document.getElementById("menuToggle");
+      const mainNav = document.getElementById("mainNav");
 
+      if (menuToggle && mainNav) {
+        menuToggle.addEventListener("click", () => {
+          mainNav.classList.toggle("active");
+        });
+      }
+    }
 
+    // ✅ 페이지 로드시 실행
+    document.addEventListener("DOMContentLoaded", () => {
+      loadComponent("header-include", "/components/header.html", bindMenuToggle);
+      loadComponent("footer-include", "/components/footer.html");
+      loadComponent("floating-button-include", "/components/floating-button.html");
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
 
-    document.querySelectorAll('.fade-item').forEach(el => observer.observe(el));
+      document.querySelectorAll('.fade-item').forEach(el => observer.observe(el));
+
+      const heroObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            heroObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.3 });
+
+      document.querySelectorAll('.hero').forEach(el => heroObserver.observe(el));
+    });
   </script>
 </body>
 </html>
