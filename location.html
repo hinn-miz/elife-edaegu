@@ -3,88 +3,73 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>오시는길 | 울산 에피트 스타시티</title>
+  <title>입지 | e편한세상 동대구역 센텀스퀘어</title>
   <link rel="stylesheet" href="/assets/css/style.css" />
   <!-- 파비콘 -->
 <link rel="icon" href="/assets/images/favicon.png" type="image/png" />
-
-  <!-- ✅ 오시는길 전용 스타일 -->
   <style>
-    .message-box {
-      background: linear-gradient(135deg, #f6f1ee, #e5d3ca);
-      border: 1px solid #d4c2ba;
-      border-radius: 16px;
-      padding: 1.5rem 2rem;
-      max-width: 720px;
-      margin: 5rem auto;
-      text-align: center;
-      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
-      transition: all 0.3s ease;
+    .desktop-only { display: block; }
+    .mobile-only { display: none; }
+
+    @media (max-width: 768px) {
+      .desktop-only { display: none; }
+      .mobile-only { display: block; }
     }
 
-    .message-box:hover {
-      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.08);
+    .fade-item {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 1.2s ease;
     }
 
-    .message-box h2 {
-      font-size: 2.2rem;
-      font-weight: 700;
-      color: #3c2a24;
-      margin-bottom: 1rem;
+    .fade-item.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
 
-    .message-box p {
-      font-size: 1.15rem;
-      color: #5a4b45;
-      line-height: 1.6;
-      margin-bottom: 2.2rem;
-    }
-
-    .message-box a.button {
-      display: inline-block;
-      padding: 0.85rem 2rem;
-      background-color: #b78e7d;
-      color: #fff;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1rem;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      transition: background-color 0.3s ease, transform 0.2s ease;
-    }
-
-    .message-box a.button:hover {
-      background-color: #9c6d5e;
-      transform: translateY(-2px);
-    }
+    .delay-1 { transition-delay: 0.2s; }
+    .delay-2 { transition-delay: 0.4s; }
+    .delay-3 { transition-delay: 0.6s; }
   </style>
 </head>
 <body>
-  <!-- ✅ 공통 헤더 로딩 영역 (header.html 포함) -->
+  <!-- ✅ 헤더 컴포넌트 -->
   <div id="header-include"></div>
 
   <main class="main-section">
-    <section class="location-message">
-      <div class="message-box">
-        <h2>모델하우스 안내</h2>
-        <p><strong>ㅣ 모델하우스 ㅣ</strong><br>울산광역시 남구 삼산동 위치</p>
-        <p>
-          현재 모델하우스는 <strong>예약담당제로</strong> 운영되고 있으며<br/>
-          예약 외 방문시 각종 <strong>혜택 대상에서 제외</strong>될 수 있으므로<br/>
-          <strong><u>방문전 반드시 예약바랍니다.</u></strong>
-        </p>
-        <a href="/form.html" class="button">문의하기</a>
+
+    <section class="info-section" style="padding: 4rem 1.5rem; ">
+      <div class="container" style="max-width: 1200px; margin: auto; display: block; padding: 0 1rem;">
+        <img src="/assets/images/location/location1.png" class="desktop-only fade-item delay-1" alt="단지 이미지1" style="width: 100%; border-radius: 12px; margin-bottom: 2rem;" />
+        <img src="/assets/images/location/location1_m.png" class="mobile-only fade-item delay-1" alt="단지 이미지1 모바일" style="width: 100%; border-radius: 12px; margin-bottom: 2rem;" />
+
+        <img src="/assets/images/location/location2.png" class="desktop-only fade-item delay-2" alt="단지 이미지2" style="width: 100%; border-radius: 12px; margin-bottom: 2rem;" />
+        <img src="/assets/images/location/location2_m.png" class="mobile-only fade-item delay-2" alt="단지 이미지2 모바일" style="width: 100%; border-radius: 12px; margin-bottom: 2rem;" />
+
+        <img src="/assets/images/location/location3.png" class="desktop-only fade-item delay-3" alt="단지 이미지3" style="width: 100%; border-radius: 12px;" />
+        <img src="/assets/images/location/location3_m.png" class="mobile-only fade-item delay-3" alt="단지 이미지3 모바일" style="width: 100%; border-radius: 12px;" />
+
+        <img src="/assets/images/location/location4.png" class="desktop-only fade-item delay-3" alt="단지 이미지3" style="width: 100%; border-radius: 12px;" />
+        <img src="/assets/images/location/location4_m.png" class="mobile-only fade-item delay-3" alt="단지 이미지3 모바일" style="width: 100%; border-radius: 12px;" />
+      
+      </div>
+    </section>
+
+    <section class="info-section" style="padding: 4rem 1.5rem;">
+      <div class="container" style="max-width: 1200px; margin: auto; display: block; padding: 0 1rem;">
+        <img src="/assets/images/location/location5.png" class="desktop-only fade-item delay-1" alt="단지 이미지5" style="width: 100%; border-radius: 12px; margin-bottom: 2rem;" />
+        <img src="/assets/images/location/location5_m.png" class="mobile-only fade-item delay-1" alt="단지 이미지5 모바일" style="width: 100%; border-radius: 12px; margin-bottom: 2rem;" />
+        <img src="/assets/images/location/location6_m.png" class="mobile-only fade-item delay-1" alt="단지 이미지5 모바일" style="width: 100%; border-radius: 12px; margin-bottom: 2rem;" />
+        <img src="/assets/images/location/location7_m.png" class="mobile-only fade-item delay-1" alt="단지 이미지5 모바일" style="width: 100%; border-radius: 12px; margin-bottom: 2rem;" />
+
       </div>
     </section>
   </main>
 
-  <!-- ✅ 공통 푸터 컴포넌트 로딩 영역 -->
+  <!-- ✅ 푸터 컴포넌트 -->
   <div id="footer-include"></div>
 
-  <!-- ✅ 플로팅 문의 버튼 컴포넌트 로딩 영역 -->
-  <div id="floating-button-include"></div>
-
-  <!-- ✅ 컴포넌트 로딩 + 햄버거 메뉴 포함 스크립트 -->
+  <!-- ✅ 공통 컴포넌트 + 햄버거 메뉴 JS 삽입 -->
   <script>
     async function loadComponent(id, path, callback) {
       try {
@@ -111,8 +96,20 @@
     document.addEventListener("DOMContentLoaded", () => {
       loadComponent("header-include", "/components/header.html", bindMenuToggle);
       loadComponent("footer-include", "/components/footer.html");
-      loadComponent("floating-button-include", "/components/floating-button.html");
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('.fade-item').forEach(el => observer.observe(el));
     });
   </script>
+  <!-- ✅ 플로팅 버튼 -->
+<a href="/form.html" class="floating-btn">방문예약</a>
 </body>
 </html>

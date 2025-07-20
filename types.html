@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>평형정보 | 울산 에피트 스타시티</title>
+  <title>평형정보 | e편한세상 동대구역 센텀스퀘어</title>
   <link rel="stylesheet" href="/assets/css/style.css" />
   <!-- 파비콘 -->
-<link rel="icon" href="/assets/images/favicon.png" type="image/png" />
+  <link rel="icon" href="/assets/images/favicon.png" type="image/png" />
   <style>
     .type-selector {
       text-align: center;
@@ -25,25 +26,42 @@
     }
 
     .type-btn.active {
-      background-color: #b78e7d;
+      background-color: #FC671A;
       color: white;
-      border-color: #b78e7d;
+      border-color: #e7a584;
     }
 
-    .type-image { display: none; }
-    .type-image.visible { display: block; }
+    .type-image {
+      display: none;
+    }
 
-    .desktop-only { display: block; }
-    .mobile-only { display: none; }
+    .type-image.visible {
+      display: block;
+    }
+
+    .desktop-only {
+      display: block;
+    }
+
+    .mobile-only {
+      display: none;
+    }
 
     @media (max-width: 768px) {
-      .desktop-only { display: none; }
-      .mobile-only { display: block; }
+      .desktop-only {
+        display: none;
+      }
+
+      .mobile-only {
+        display: block;
+      }
     }
+
     .type-btn {
       display: inline-block;
       margin: 0.4rem 0.3rem;
     }
+
     .info-section {
       padding: 4rem 1.5rem;
       background-color: #f9f9f9;
@@ -63,6 +81,7 @@
     }
   </style>
 </head>
+
 <body>
   <!-- ✅ 헤더 컴포넌트 -->
   <div id="header-include"></div>
@@ -71,43 +90,81 @@
     <section class="info-section">
       <div class="container">
         <div class="type-selector">
-          <button class="type-btn active" data-type="1">119㎡ A</button>
-          <button class="type-btn" data-type="2">119㎡ B</button>
-          <button class="type-btn" data-type="3">119㎡ C</button>
-          <button class="type-btn" data-type="4">119㎡ D</button>
-          <button class="type-btn" data-type="5">119㎡ E</button>
-          <button class="type-btn" data-type="6">119㎡ F</button>
+          <button class="type-btn active" data-type="1">79㎡ A</button>
+          <button class="type-btn" data-type="2">79㎡ B</button>
+          <button class="type-btn" data-type="3">84㎡ A</button>
+          <button class="type-btn" data-type="4">84㎡ B</button>
+          <button class="type-btn" data-type="5">84㎡ C</button>
+          <button class="type-btn" data-type="6">107㎡ A</button>
+          <button class="type-btn" data-type="7">107㎡ B</button>
+          <button class="type-btn" data-type="8">125㎡ A</button>
+          <button class="type-btn" data-type="9">125㎡ B</button>
+          <button class="type-btn" data-type="10">125㎡ C</button>
+          <button class="type-btn" data-type="11">125㎡ D</button>
+          <button class="type-btn" data-type="12">125㎡ E</button>
         </div>
 
         <div class="type-image-wrap">
           <div class="type-image type-1 visible">
-            <img src="/assets/images/unit_1.jpg" class="desktop-only" alt="119㎡ A (PC)" />
-            <img src="/assets/images/type1_m.jpg" class="mobile-only" alt="119㎡ A (Mobile)" />
+            <img src="/assets/images/type/1.png" class="desktop-only" alt="79㎡ A (PC)" />
+            <img src="/assets/images/type/13.png" class="mobile-only" alt="79㎡ A (Mobile)" />
           </div>
 
+
           <div class="type-image type-2">
-            <img src="/assets/images/unit_2.jpg" class="desktop-only" alt="119㎡ B (PC)" />
-            <img src="/assets/images/type2_m.jpg" class="mobile-only" alt="119㎡ B (Mobile)" />
+            <img src="/assets/images/type/2.png" class="desktop-only" alt="79㎡ B (PC)" />
+            <img src="/assets/images/type/14.png" class="mobile-only" alt="79㎡ B (Mobile)" />
           </div>
 
           <div class="type-image type-3">
-            <img src="/assets/images/unit_3.jpg" class="desktop-only" alt="119㎡ C (PC)" />
-            <img src="/assets/images/type3_m.jpg" class="mobile-only" alt="119㎡ C (Mobile)" />
+            <img src="/assets/images/type/3.png" class="desktop-only" alt="84㎡ A (PC)" />
+            <img src="/assets/images/type/15.png" class="mobile-only" alt="84㎡ A (Mobile)" />
           </div>
 
+
           <div class="type-image type-4">
-            <img src="/assets/images/unit_4.jpg" class="desktop-only" alt="119㎡ D (PC)" />
-            <img src="/assets/images/type4_m.jpg" class="mobile-only" alt="119㎡ D (Mobile)" />
+            <img src="/assets/images/type/4.png" class="desktop-only" alt="84㎡ B (PC)" />
+            <img src="/assets/images/type/16.png" class="mobile-only" alt="84㎡ B (Mobile)" />
           </div>
 
           <div class="type-image type-5">
-            <img src="/assets/images/unit_5.jpg" class="desktop-only" alt="119㎡ E (PC)" />
-            <img src="/assets/images/type5_m.jpg" class="mobile-only" alt="119㎡ E (Mobile)" />
+            <img src="/assets/images/type/5.png" class="desktop-only" alt="84㎡ C (PC)" />
+            <img src="/assets/images/type/17.png" class="mobile-only" alt="84㎡ C (Mobile)" />
           </div>
 
           <div class="type-image type-6">
-            <img src="/assets/images/unit_6.jpg" class="desktop-only" alt="119㎡ F (PC)" />
-            <img src="/assets/images/type6_m.jpg" class="mobile-only" alt="119㎡ F (Mobile)" />
+            <img src="/assets/images/type/6.png" class="desktop-only" alt="107㎡ A (PC)" />
+            <img src="/assets/images/type/18.png" class="mobile-only" alt="107㎡ A (Mobile)" />
+          </div>
+
+          <div class="type-image type-7">
+            <img src="/assets/images/type/7.png" class="desktop-only" alt="107㎡ B (PC)" />
+            <img src="/assets/images/type/19.png" class="mobile-only" alt="107㎡ B (Mobile)" />
+          </div>
+
+          <div class="type-image type-8">
+            <img src="/assets/images/type/8.png" class="desktop-only" alt="125㎡ A (PC)" />
+            <img src="/assets/images/type/20.png" class="mobile-only" alt="125㎡ A (Mobile)" />
+          </div>
+
+          <div class="type-image type-9">
+            <img src="/assets/images/type/9.png" class="desktop-only" alt="125㎡ B (PC)" />
+            <img src="/assets/images/type/21.png" class="mobile-only" alt="125㎡ B (Mobile)" />
+          </div>
+
+          <div class="type-image type-10">
+            <img src="/assets/images/type/10.png" class="desktop-only" alt="125㎡ C (PC)" />
+            <img src="/assets/images/type/22.png" class="mobile-only" alt="125㎡ C (Mobile)" />
+          </div>
+
+          <div class="type-image type-11">
+            <img src="/assets/images/type/11.png" class="desktop-only" alt="125㎡ D (PC)" />
+            <img src="/assets/images/type/23.png" class="mobile-only" alt="125㎡ D (Mobile)" />
+          </div>
+
+          <div class="type-image type-12">
+            <img src="/assets/images/type/12.png" class="desktop-only" alt="125㎡ E (PC)" />
+            <img src="/assets/images/type/24.png" class="mobile-only" alt="125㎡ E (Mobile)" />
           </div>
         </div>
       </div>
@@ -116,8 +173,6 @@
 
   <!-- ✅ 푸터 컴포넌트 -->
   <div id="footer-include"></div>
-  <!-- ✅ 플로팅 버튼 컴포넌트 -->
-  <div id="floating-button-include"></div>
 
   <!-- ✅ 공통 컴포넌트 JS 삽입 + 햄버거 메뉴 처리 -->
   <script>
@@ -146,7 +201,6 @@
     document.addEventListener("DOMContentLoaded", () => {
       loadComponent("header-include", "/components/header.html", bindMenuToggle);
       loadComponent("footer-include", "/components/footer.html");
-      loadComponent("floating-button-include", "/components/floating-button.html");
 
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -170,5 +224,8 @@
       });
     });
   </script>
+  <!-- ✅ 플로팅 버튼 -->
+<a href="/form.html" class="floating-btn">방문예약</a>
 </body>
+
 </html>

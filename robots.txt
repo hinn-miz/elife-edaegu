@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ulsan-efete.netlify.app/sitemap.xml
+Sitemap: https://elife-edaegu.netlify.app/sitemap.xml
